@@ -1,6 +1,7 @@
 import { onlyLocation } from "../services/functions"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import '../css/Location.css'
 
 const Location = () => {
 	const [location, setLocation] = useState(null)
@@ -11,7 +12,7 @@ const Location = () => {
 	},[])
 
 	return (
-		<div>
+		<div className='main-location'>
 			{
 				location != null ? (
 					<div>

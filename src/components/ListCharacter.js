@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { allCharacters } from "../services/functions"
+import '../css/ListCharacter.css'
 
 const ListCharacter = () => {
 
@@ -11,7 +12,8 @@ const ListCharacter = () => {
   }, [])
 
   return(
-    <div>
+    <div className='main-ListCharacter'>
+      <h3> Lista Personajes </h3>
       <div>
         {characters != null ? (
           characters.map(x => (

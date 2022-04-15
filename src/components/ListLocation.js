@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { allLocations } from "../services/functions"
 import { Link } from 'react-router-dom'
+import '../css/ListLocation.css'
 
 const ListLocation = () => {
   const [listLocation, setListLocation] = useState(null)
@@ -10,7 +11,8 @@ const ListLocation = () => {
   }, [])
 
 return (
-  <div>
+  <div className='main-ListLocation'>
+    <h3> Lista de ubicaciones </h3>
     <div>
       {
         listLocation != null ? (

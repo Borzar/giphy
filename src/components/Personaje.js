@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { onlyCharacter } from "../services/functions"
 import { useEffect, useState } from "react"
+import '../css/Character.css'
 
 const Personaje = () => {
   const params = useParams()
@@ -11,7 +12,7 @@ const Personaje = () => {
   },[])
 
   return (
-    <div>
+    <div className='main-character'>
       {
         character != null ? (
           <div>
