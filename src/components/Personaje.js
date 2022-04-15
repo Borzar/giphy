@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import { onlyCharacter } from "./services/functions"
+import { onlyCharacter } from "../services/functions"
 import { useEffect, useState } from "react"
 
 const Personaje = () => {
