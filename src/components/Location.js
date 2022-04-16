@@ -16,11 +16,11 @@ const Location = () => {
 			{
 				location != null ? (
 					<div>
-						<p>{location.id}</p>
-						<p>{location.name}</p>
-						<p>{location.type}</p>
-						<p>{location.dimension}</p>
-						<p>{location.created}</p>
+						<p><b>Id </b>{location.id}</p>
+						<p><b>Name </b>{location.name}</p>
+						<p><b>Type </b>{location.type}</p>
+						<p><b>Dimension </b>{location.dimension}</p>
+						<p><b>Created </b>{location.created}</p>
 					</div>
 				) : ('Cargando Ubicacion')
 			}

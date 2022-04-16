@@ -17,10 +17,10 @@ const Personaje = () => {
         character != null ? (
           <div>
             <h1> {character.name} </h1>
-            <p> gender: {character.gender} </p>
-            <p> id: {character.id} </p>
-            <p> species: {character.species} </p>
-            <p> status: {character.status} </p>
+            <p> <b>Id </b>{character.id}</p>
+            <p> <b>Gender </b>{character.gender}</p>
+            <p> <b>Species </b>{character.species}</p>
+            <p> <b>Status </b>{character.status}</p>
             <img src={character.image}/>
           </div>
         ) : ('no hay personajes') 

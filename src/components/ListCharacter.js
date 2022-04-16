@@ -12,12 +12,12 @@ const ListCharacter = () => {
   }, [])
 
   return(
-    <div className='main-ListCharacter'>
+    <div className='main-listcharacter'>
       <h3> Lista Personajes </h3>
       <div>
         {characters != null ? (
           characters.map(x => (
-            <div key={x.id}>
+            <div className='disable-link' key={x.id}>
               <Link to={`/Personaje/${x.id}`}>{x.name} </Link>
           </div>
           ))
