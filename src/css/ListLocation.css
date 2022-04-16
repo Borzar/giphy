@@ -1,6 +1,9 @@
 .main-ListLocation {
   background-color: rgb(255,165,0,0.3);
   border: 2px solid rgb(255,165,0);
-  margin: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 20%;
   padding: 12px;
 }
