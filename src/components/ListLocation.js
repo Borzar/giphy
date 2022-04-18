@@ -5,10 +5,14 @@ import '../css/ListLocation.css'
 
 const ListLocation = () => {
   const [listLocation, setListLocation] = useState(null)
+  const [page, setPage] = useState(1)
 
   useEffect(() => {
-    allLocations(setListLocation)
-  }, [])
+    allLocations(page, setListLocation)
+  }, [page])
+
+  const nextPage = () => setPage(page + 1)
+  const prevPage = () => setPage(page - 1)
 
 return (
   <div className='main-ListLocation'>
@@ -24,7 +28,9 @@ return (
           ) : ('Loading')
        }
     </div>
-    
+    <button onClick={nextPage}>Next</button>
+    {page <= 0 ? ('error') : (page)}
+    <button onClick={prevPage}>Prev</button>
   </div>
     )
   }
