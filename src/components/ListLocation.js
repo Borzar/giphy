@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { allLocations } from "../services/functions"
+import { locationListPage } from "../services/functions"
 import { Link } from 'react-router-dom'
 import '../css/ListLocation.css'
 
@@ -8,7 +8,7 @@ const ListLocation = () => {
   const [page, setPage] = useState(1)
 
   useEffect(() => {
-    allLocations(page, setListLocation)
+    locationListPage(page, setListLocation)
   }, [page])
 
   const nextPage = () => setPage(page + 1)

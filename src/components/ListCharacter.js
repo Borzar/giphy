@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-import { Link } from 'react-router-dom'
-import { characterListPage} from "../services/functions"
+import { Link, useParams } from 'react-router-dom'
+import { characterListPage, filterbyName} from "../services/functions"
 import '../css/ListCharacter.css'
 
 const ListCharacter = () => {
@@ -14,7 +14,7 @@ const ListCharacter = () => {
 
   const nextPage = () => setPage(page + 1)
   const prevPage = () => setPage(page - 1)
-
+  
   return(
     <div className='main-listcharacter'>
       <h3> Lista Personajes </h3>
@@ -25,12 +25,10 @@ const ListCharacter = () => {
               <Link to={`/Personaje/${x.id}`}>{x.name} </Link>
           </div>
           ))
-        ) : ('Loading ..')}
-          
+        ) : ('Cargando Personajes..')}
       </div>
       <button onClick={nextPage} > Next </button>
       {page > 0 ? (page) : ('error')} 
-
       <button onClick={prevPage}> Prev </button>
     </div>
 	)

@@ -15,10 +15,9 @@ const onlyCharacter = async (id, state) => {
   state(peticion.data)
 }
 
-const allLocations = async (page,state) => {
+const locationListPage = async (page,state) => {
   const peticion = await axios.get(`https://rickandmortyapi.com/api/location/?page=${page}`)
   state(peticion.data.results)
-  console.log(peticion)
 }
 
 const onlyLocation = async (id, state) => {
@@ -26,9 +25,19 @@ const onlyLocation = async (id, state) => {
   state(peticion.data)
 }
 
+const filterbyName = async ( name, state) => {
+  try {
+  const peticion = await axios.get(`https://rickandmortyapi.com/api/character/?name=${name}`)
+    state(peticion.data.results)
+  } catch (error) {
+    console.error(error) 
+  }
+} 
+
 export {
   onlyCharacter,
-  allLocations,
+  locationListPage,
   onlyLocation,
-  characterListPage
+  characterListPage,
+  filterbyName
 }
