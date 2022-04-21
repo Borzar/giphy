@@ -1,17 +1,17 @@
-import ListCharacter from './ListCharacter'
-import ListLocation from './ListLocation'
 import '../css/Inicio.css'
-import SearchBar from './SearchBar'
+import Navbar from './Navbar'
+import Title from './Title'
+
 const Inicio = () => {
     
   return (
-    <div className='flex-container'> 
-      <ListLocation/>
-      <ListCharacter/>
-      <SearchBar />
+    <div >
+      <Title />
+      <Navbar />
     </div> 
   )
 }
-
+  
+  
 export default Inicio
 

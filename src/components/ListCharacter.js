@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-import { Link, useParams } from 'react-router-dom'
-import { characterListPage, filterbyName} from "../services/functions"
+import { Link } from 'react-router-dom'
+import { characterListPage, } from "../services/functions"
 import '../css/ListCharacter.css'
 
 const ListCharacter = () => {
@@ -12,9 +12,18 @@ const ListCharacter = () => {
    characterListPage(page, setCharacters) 
   }, [page])
 
-  const nextPage = () => setPage(page + 1)
-  const prevPage = () => setPage(page - 1)
+  const nextPage = () => {
+    if (page === 42) return
+    setPage(page + 1)
+  }
+
+  const prevPage = () => {
+    if (page === 1) return
+    setPage(page - 1)
+  }
+
   
+
   return(
     <div className='main-listcharacter'>
       <h3> Lista Personajes </h3>

@@ -15,8 +15,6 @@ const SearchBar = () => {
   const handleChanged = (e) => {
     setKeyword(e.target.value)
   }
-
-
   
   return(
     <div className='main-search-bar'>
