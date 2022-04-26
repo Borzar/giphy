@@ -1,0 +1,20 @@
+.navbar {
+  background-color: rgb(255,150, 0, 0.2);
+  width: 20%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin-top: 100px
+  }
+
+  .navbar-ul {
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .navbar-link {
+    display: block;
+    color: inherit;
+    text-decoration: inherit;
+    padding: 12px;
+  }

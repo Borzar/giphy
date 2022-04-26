@@ -1,4 +1,5 @@
 import '../css/Inicio.css'
+import ListCharacter from './ListCharacter'
 import Navbar from './Navbar'
 import Title from './Title'
 
@@ -8,6 +9,7 @@ const Inicio = () => {
     <div >
       <Title />
       <Navbar />
+      <ListCharacter/>
     </div> 
   )
 }

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { characterListPage, } from "../services/functions"
 import '../css/ListCharacter.css'
+import Title from './Title'
+import Navbar from "./Navbar"
 
 const ListCharacter = () => {
 
@@ -22,23 +24,29 @@ const ListCharacter = () => {
     setPage(page - 1)
   }
 
-  
-
   return(
-    <div className='main-listcharacter'>
-      <h3> Lista Personajes </h3>
-      <div>
-        {characters != null ? (
-          characters.map(x => (
-            <div className='disable-link' key={x.id}>
-              <Link to={`/Personaje/${x.id}`}>{x.name} </Link>
-          </div>
-          ))
-        ) : ('Cargando Personajes..')}
+    <div> 
+      <Title />
+      <Navbar />
+      <div className='list'>
+        <h3>Lista personajes </h3>
+        <div className='flex-container'>
+          {characters != null ? (
+            characters.map(x => (
+              <div  key={x.id}>
+                <img className='img' src={x.image} /> 
+
+                <Link className='block' to={`/Personaje/${x.id}`}>{x.name}</Link>
+              </div>
+            ))
+          ) : ('Cargando Personajes..')}
+        </div>
+        <div className='button'>
+          <button onClick={prevPage}> Prev </button>
+          {page > 0 ? (page) : ('error')} 
+          <button onClick={nextPage} > Next </button>
+        </div>
       </div>
-      <button onClick={nextPage} > Next </button>
-      {page > 0 ? (page) : ('error')} 
-      <button onClick={prevPage}> Prev </button>
     </div>
 	)
 }

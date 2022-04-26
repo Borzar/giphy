@@ -1,0 +1,7 @@
+.title {
+  position: fixed;
+  top: 0;
+  background-color: rgb(255, 150, 0, 0.5);
+  padding: 10px;
+  width: 100%;
+}

@@ -1,17 +1,18 @@
 import { Link } from 'react-router-dom'
+import '../css/Navbar.css'
 
 const Navbar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to='/Personaje'>Obtener lista de personajes</Link>
+    <nav className='navbar'>
+      <ul className='navbar-ul'>
+        <li className='navbar-li'> 
+          <Link className='navbar-link' to='/Personaje'>Lista de personajes</Link>
         </li>
-        <li>
-          <Link to='/Location'>Obtener lista de Ubicaciones</Link>
+        <li className='navbar-li'>
+          <Link className='navbar-link' to='/Location'>Lista de ubicaciones</Link>
         </li>
-        <li>
-          <Link to='/'>Obtener Lista de episodios // En proceso</Link>
+        <li className='navbar-li'>
+          <Link className='navbar-link' to='/'>Lista de episodios // En proceso</Link>
         </li>
       </ul>
     </nav>
