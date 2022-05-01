@@ -11,6 +11,7 @@ const SearchBar = () => {
     filterbyName(keyword, setCharacters)
   }, [keyword])
 
+  
 
   const handleChanged = (e) => {
     setKeyword(e.target.value)

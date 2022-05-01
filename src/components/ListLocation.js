@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import { locationListPage } from "../services/functions"
 import { Link } from 'react-router-dom'
+import Title from './Title'
+import Navbar from "./Navbar"
 import '../css/ListLocation.css'
 
 const ListLocation = () => {
@@ -15,24 +17,36 @@ const ListLocation = () => {
   const prevPage = () => setPage(page - 1)
 
 return (
-  <div className='main-ListLocation'>
-    <h3> Lista de ubicaciones </h3>
-    <div>
-      {
-        listLocation != null ? (
-          listLocation.map((x) => (
-            <div key={x.id}>
-             <Link to={`/Location/${x.id}`}> {x.name} </Link> 
-            </div>
-          ))
-          ) : ('Loading')
-       }
+
+  <div>
+    <Title />
+    <Navbar />
+    <div className='main-ListLocation'>
+      <h3> Lista de ubicaciones </h3>
+      <div>
+        {
+          listLocation != null ? (
+            listLocation.map((x) => (
+              <table className='table'>
+                <tr key={x.id}>
+                  <td>{x.id}</td>
+                  <td><Link to={`/Location/${x.id}`}>{x.name} </Link></td>
+                  <td>{x.ype}</td>
+                </tr>
+              </table>
+            ))
+            ) : ('Loading')
+         }
+      </div>
+1
     </div>
-    <button onClick={nextPage}>Next</button>
-    {page <= 0 ? ('error') : (page)}
-    <button onClick={prevPage}>Prev</button>
+      <div className='button'> 
+        <button onClick={nextPage}>Next</button>
+          {page <= 0 ? ('error') : (page)}
+        <button onClick={prevPage}>Prev</button>
+      </div>
   </div>
-    )
-  }
+  )
+}
 
 export default ListLocation

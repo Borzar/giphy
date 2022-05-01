@@ -1,6 +1,6 @@
 const Prueba = () => {
   return(
-    <div>personaje</div>
+    <div>personaje  hola</div>
   )
 }
 export default Prueba

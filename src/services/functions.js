@@ -25,14 +25,10 @@ const onlyLocation = async (id, state) => {
   state(peticion.data)
 }
 
-const filterbyName = async ( name, state) => {
-  try {
+const filterbyName = async (name, character) => {
   const peticion = await axios.get(`https://rickandmortyapi.com/api/character/?name=${name}`)
-    state(peticion.data.results)
-  } catch (error) {
-    console.error(error) 
-  }
-} 
+  character(peticion.data.results)
+  } 
 
 export {
   onlyCharacter,

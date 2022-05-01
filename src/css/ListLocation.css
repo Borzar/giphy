@@ -1,9 +1,17 @@
 .main-ListLocation {
-  background-color: rgb(255,165,0,0.3);
-  border: 2px solid rgb(255,165,0);
-  margin-left: auto;
+  margin-left: 20%;
   margin-right: auto;
-  margin-top: 10px;
-  width: 20%;
+  margin-top: 11%;
+  width: 70%;
   padding: 12px;
+  text-align: center;
 }
+
+.table {
+  margin-left: 35%;
+}
+
+.button {
+  margin-left: 50%;
+}
+

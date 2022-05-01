@@ -4,11 +4,13 @@ import Prueba from './Prueba.js'
 describe('Componente de Prueba', () => {
   it('find a word: personaje', () => {
     render(<Prueba/>)
-    expect(screen.queryByText(/personaje/)).toBeInTheDocument()
+    const findPersobaje = screen.queryByText(/personaje/)
+    expect(findPersobaje).toBeInTheDocument()
   })
 
   it('find a word: hola', () => {
     render(<Prueba/>)
-    expect(screen.queryByText(/personaje/)).toBeInTheDocument()
+    const findHola = screen.queryByText(/hola/)
+    expect(findHola).toBeInTheDocument()
   })
 })
