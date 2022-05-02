@@ -30,10 +30,23 @@ const filterbyName = async (name, character) => {
   character(peticion.data.results)
   } 
 
+const episodeListPage = async (page, state) => {
+  const peticion = await axios.get(`https://rickandmortyapi.com/api/episode?page=${page}`)
+  state(peticion.data.results)
+}
+
+const singleEpisode = async (id, state) => {
+  const peticion = await axios.get(`https://rickandmortyapi.com/api/episode/${id}`)
+  state(peticion.data)
+  console.log(peticion)
+}
+
 export {
   onlyCharacter,
   locationListPage,
   onlyLocation,
   characterListPage,
-  filterbyName
+  filterbyName,
+  episodeListPage,
+  singleEpisode
 }

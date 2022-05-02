@@ -31,7 +31,7 @@ return (
                 <tr key={x.id}>
                   <td>{x.id}</td>
                   <td><Link to={`/Location/${x.id}`}>{x.name} </Link></td>
-                  <td>{x.ype}</td>
+                  <td>{x.type}</td>
                 </tr>
               </table>
             ))
