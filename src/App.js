@@ -13,12 +13,12 @@ const App = () => {
     <BrowserRouter>    
       <Routes> 
         <Route path='/' element={<Inicio />}> </Route>
-        <Route path='/Personaje' element={<ListCharacter/>}> </Route>
-        <Route path='/Personaje/:id' element={<Personaje />}> </Route>
-        <Route path='/Location' element={<ListLocation/>}></Route>
-        <Route path='/Location/:id' element={<Location/>}></Route>
-        <Route path='/Episode' element={<ListEpisodes/>}></Route>
-        <Route path='/Episode/:id' element={<Episode/>}></Route>
+        <Route path='/characters' element={<ListCharacter/>}> </Route>
+        <Route path='/characters/:id' element={<Personaje />}> </Route>
+        <Route path='/locations' element={<ListLocation/>}></Route>
+        <Route path='/locations/:id' element={<Location/>}></Route>
+        <Route path='/episodes' element={<ListEpisodes/>}></Route>
+        <Route path='/episodes/:id' element={<Episode/>}></Route>
       </Routes>  
     </BrowserRouter>
   )

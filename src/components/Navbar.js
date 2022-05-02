@@ -6,13 +6,13 @@ const Navbar = () => {
     <nav className='navbar'>
       <ul className='navbar-ul'>
         <li className='navbar-li'> 
-          <Link className='navbar-link' to='/Personaje'>Lista de personajes</Link>
+          <Link className='navbar-link' to='/characters'>List of Characters</Link>
         </li>
         <li className='navbar-li'>
-          <Link className='navbar-link' to='/Location'>Lista de ubicaciones</Link>
+          <Link className='navbar-link' to='/locations'>List of Locations</Link>
         </li>
         <li className='navbar-li'>
-          <Link className='navbar-link' to='/'>Lista de episodios // En proceso</Link>
+          <Link className='navbar-link' to='/episodes'>List of Episodes</Link>
         </li>
       </ul>
     </nav>
