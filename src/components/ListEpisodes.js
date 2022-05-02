@@ -32,18 +32,19 @@ const ListEpisodes = () => {
       <div className='main'>
         <h3>Lista de episodios</h3>
         <table> 
-          <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>air_date</th>
-            <th>episode</th>
-            <th>url</th>
-            <th>created</th>
-          </tr>
-          {
-            episode != null ? (
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>name</th>
+              <th>air_date</th>
+              <th>episode</th>
+              <th>url</th>
+              <th>created</th>
+            </tr>  
+          </thead>
+           {episode != null ? (
               episode.map((x) => 
-              <tbody>
+              <tbody key={x.id}>
                 <tr>
                   <td>{x.id}</td>
                   <td>{x.name}</td>
@@ -53,11 +54,8 @@ const ListEpisodes = () => {
                   <td>{x.created}</td>
                 </tr>
               </tbody>
-
               )
-            ) : ('')
-          }
-
+            ) : ('Loading episodes...')}
         </table>
         <div> 
           <button onClick={prevPage}>Prev</button>
