@@ -12,6 +12,24 @@
     list-style: none;
   }
 
+  .navbar-li {
+    display: block;
+    padding-top: 10px;
+  }
+  
+  .nav-inline {
+    display: inline;
+    color: inherit;
+    padding: 8px;
+    text-decoration: inherit;
+  }
+
+  .navbar-li  img {
+    width: 30px;
+    display: inline;
+    border-radius: 20px;
+  }
+
   .navbar-link {
     display: block;
     color: inherit;

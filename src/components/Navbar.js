@@ -1,19 +1,29 @@
 import { Link } from 'react-router-dom'
 import '../css/Navbar.css'
+import logo from '../assets/ghostimage.jpeg'
 
 const Navbar = () => {
   return (
     <nav className='navbar'>
       <ul className='navbar-ul'>
+        <div>
         <li className='navbar-li'> 
-          <Link className='navbar-link' to='/characters'>List of Characters</Link>
+          <img src={logo} />
+          <Link className='nav-inline' to='/characters'>List of Characters</Link>
         </li>
+        </div>
+        <div>
         <li className='navbar-li'>
-          <Link className='navbar-link' to='/locations'>List of Locations</Link>
+          <img src={logo} />
+          <Link className='nav-inline' to='/locations'>List of Locations</Link>
         </li>
+        </div>
+        <div>
         <li className='navbar-li'>
-          <Link className='navbar-link' to='/episodes'>List of Episodes</Link>
+          <img src={logo} />
+          <Link className='nav-inline' to='/episodes'>List of Episodes</Link>
         </li>
+        </div>
       </ul>
     </nav>
   )
