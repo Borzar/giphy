@@ -21,7 +21,7 @@ const Personaje = () => {
             <p> <b>Gender </b>{character.gender}</p>
             <p> <b>Species </b>{character.species}</p>
             <p> <b>Status </b>{character.status}</p>
-            <img src={character.image}/>
+            <img className='main-character-img' src={character.image}/>
           </div>
         ) : ('no hay personajes') 
       }
