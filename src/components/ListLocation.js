@@ -1,51 +1,68 @@
 import { useState, useEffect } from "react"
 import { locationListPage } from "../services/functions"
-import { Link } from 'react-router-dom'
 import Title from './Title'
 import Navbar from "./Navbar"
-import '../css/ListLocation.css'
+import '../css/List.css'
 
 const ListLocation = () => {
-  const [listLocation, setListLocation] = useState(null)
+  const [location, setLocation] = useState(null)
   const [page, setPage] = useState(1)
 
   useEffect(() => {
-    locationListPage(page, setListLocation)
+    locationListPage(page, setLocation)
   }, [page])
 
-  const nextPage = () => setPage(page + 1)
-  const prevPage = () => setPage(page - 1)
+  const nextPage = () => {
+    if (page === 7)
+      return
+    setPage(page + 1)
+  }
+
+  const prevPage = () => {
+    if (page === 1)
+      return
+    setPage(page - 1)
+  }
 
 return (
-
-  <div>
-    <Title />
-    <Navbar />
-    <div className='main-ListLocation'>
-      <h3> Lista de ubicaciones </h3>
-      <div>
-        {
-          listLocation != null ? (
-            listLocation.map((x) => (
-              <table className='table'>
-                <tr key={x.id}>
+    <div>
+      <Title />
+      <Navbar />
+      <div className='list-of'>
+        <h3>List of Locations</h3>
+        <div> 
+          <button onClick={prevPage}>Prev</button>
+          {page}
+          <button onClick={nextPage}>Next</button>
+        </div>
+        <table> 
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>name</th>
+              <th>type</th>
+              <th>dimension</th>
+              <th>url</th>
+              <th>created</th>
+            </tr>  
+          </thead>
+           {location != null ? (
+              location.map((x) => 
+              <tbody key={x.id}>
+                <tr>
                   <td>{x.id}</td>
-                  <td><Link to={`/Location/${x.id}`}>{x.name} </Link></td>
+                  <td>{x.name}</td>
                   <td>{x.type}</td>
+                  <td>{x.dimension}</td>
+                  <td>{x.url}</td>
+                  <td>{x.created}</td>
                 </tr>
-              </table>
-            ))
-            ) : ('Loading')
-         }
+              </tbody>
+              )
+            ) : ('Loading locations...')}
+        </table>
       </div>
-1
     </div>
-      <div className='button'> 
-        <button onClick={nextPage}>Next</button>
-          {page <= 0 ? ('error') : (page)}
-        <button onClick={prevPage}>Prev</button>
-      </div>
-  </div>
   )
 }
 

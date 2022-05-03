@@ -3,7 +3,7 @@ import { episodeListPage } from '../services/functions'
 import { Link } from 'react-router-dom'
 import Title from "./Title"
 import Navbar from "./Navbar"
-import '../css/ListEpisodes.css'
+import '../css/List.css'
 
 const ListEpisodes = () => {
   const [episode, setEpisode] = useState(null)
@@ -29,8 +29,13 @@ const ListEpisodes = () => {
     <div>
       <Title />
       <Navbar />
-      <div className='main'>
+      <div className='list-of'>
         <h3>Lista de episodios</h3>
+        <div> 
+          <button onClick={prevPage}>Prev</button>
+          {page}
+          <button onClick={nextPage}>Next</button>
+        </div>
         <table> 
           <thead>
             <tr>
@@ -57,11 +62,6 @@ const ListEpisodes = () => {
               )
             ) : ('Loading episodes...')}
         </table>
-        <div> 
-          <button onClick={prevPage}>Prev</button>
-          {page}
-          <button onClick={nextPage}>Next</button>
-        </div>
       </div>
     </div>
   )
