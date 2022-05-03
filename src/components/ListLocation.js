@@ -30,14 +30,14 @@ return (
       <Navbar />
       <div className='list-of'>
         <h3>List of Locations</h3>
-        <div> 
+        <div className='list-of-button'> 
           <button onClick={prevPage}>Prev</button>
           {page}
           <button onClick={nextPage}>Next</button>
         </div>
-        <table> 
+        <table className='table'> 
           <thead>
-            <tr>
+            <tr className='table-thead-tr'>
               <th>id</th>
               <th>name</th>
               <th>type</th>
@@ -49,7 +49,7 @@ return (
            {location != null ? (
               location.map((x) => 
               <tbody key={x.id}>
-                <tr>
+                <tr className='table-tbody-tr'>
                   <td>{x.id}</td>
                   <td>{x.name}</td>
                   <td>{x.type}</td>

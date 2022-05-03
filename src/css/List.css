@@ -5,3 +5,24 @@
   text-align: center;
 }
 
+.list-of-button {
+  display: inline;
+  margin: 5px; 
+}
+
+.list-of-button button {
+  margin: 12px;
+}
+
+.table {
+  border: 2px solid rgb(0,0,0,0.2);
+}
+
+.table-thead-tr {
+  background-color: rgb(255, 165,0,0.4);
+}
+
+.table-tbody-tr {
+  background-color: rgb(255, 165,0,0.1);
+}
+

@@ -31,14 +31,14 @@ const ListEpisodes = () => {
       <Navbar />
       <div className='list-of'>
         <h3>Lista de episodios</h3>
-        <div> 
+        <div className='list-of-button'> 
           <button onClick={prevPage}>Prev</button>
           {page}
           <button onClick={nextPage}>Next</button>
         </div>
-        <table> 
+        <table className='table'> 
           <thead>
-            <tr>
+            <tr className='table-thead-tr'>
               <th>id</th>
               <th>name</th>
               <th>air_date</th>
@@ -50,7 +50,7 @@ const ListEpisodes = () => {
            {episode != null ? (
               episode.map((x) => 
               <tbody key={x.id}>
-                <tr>
+                <tr className='table-tbody-tr'>
                   <td>{x.id}</td>
                   <td>{x.name}</td>
                   <td>{x.air_date}</td>
