@@ -8,6 +8,7 @@ const Inicio = () => {
     <div>
       <Title />
       <Navbar />
+      <h2 className='titulo'>Welcome</h2>
     </div> 
   )
 }

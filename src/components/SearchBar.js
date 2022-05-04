@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react"
 import { filterbyName } from "../services/functions"
-import '../css/SearchBar.css'
 import { Link } from 'react-router-dom'
+import Title from "./Title"
+import Navbar from "./Navbar"
+import '../css/SearchBar.css'
 
 const SearchBar = () => {
   const [keyword, setKeyword] = useState('')
@@ -18,23 +20,27 @@ const SearchBar = () => {
   }
   
   return(
-    <div className='main-search-bar'>
-      <h3>Buscar Personaje</h3>
-        <input
-          type='text'          
-          value={keyword} 
-          placeholder='Filter by name' 
-          onChange={handleChanged}
-         />
-      {
-        characters != null ? (
-          characters.map((character) => (
-            <div key={character.id}> 
-              <Link to={`/Personaje/${character.id}`}> {character.name} </Link>
-            </div>
-          ))
-        ) : ('Lista de personajes ...')
-      }
+    <div>
+      <Title />
+      <Navbar />
+      <div className='filter-table'>
+        <h3>Buscar Personaje</h3>
+          <input className='filter-table-input'
+            type='text'          
+            value={keyword} 
+            placeholder='Filter by name' 
+            onChange={handleChanged}
+           />
+        {
+          characters != null ? (
+            characters.map((character) => (
+              <div key={character.id}> 
+                <Link className='disable-link' to={`/Personaje/${character.id}`}> {character.name} </Link>
+              </div>
+            ))
+          ) : ('Lista de personajes ...')
+        }
+      </div>
     </div>
   )
 }

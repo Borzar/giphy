@@ -7,6 +7,12 @@ const Navbar = () => {
     <nav className='navbar'>
       <ul className='navbar-ul'>
         <div>
+        <li className='navbar-li'>
+          <img src={logo} />
+          <Link className='nav-inline' to='/search'>Filter Characters</Link>
+        </li>
+        </div>
+        <div>
         <li className='navbar-li'> 
           <img src={logo} />
           <Link className='nav-inline' to='/characters'>List of Characters</Link>

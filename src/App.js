@@ -4,15 +4,16 @@ import Personaje from './components/Personaje'
 import Location from './components/Location'
 import ListLocation from './components/ListLocation'
 import ListCharacter from './components/ListCharacter'
-import "./App.css"
 import ListEpisodes from './components/ListEpisodes'
 import Episode from './components/Episode'
-
+import SearchBar from './components/SearchBar'
+import "./App.css"
 const App = () => {
   return (
     <BrowserRouter>    
       <Routes> 
         <Route path='/' element={<Inicio />}> </Route>
+        <Route path='/search' element={<SearchBar/>}> </Route>
         <Route path='/characters' element={<ListCharacter/>}> </Route>
         <Route path='/characters/:id' element={<Personaje />}> </Route>
         <Route path='/locations' element={<ListLocation/>}></Route>
