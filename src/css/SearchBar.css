@@ -1,14 +1,18 @@
-.main-search-bar {
-  border: 2px solid rgb(255,165,0);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
+.filter-table {
+  display: block;
+  border: 2px solid rgb(0,0,0,0.2);
   width: 20%;
+  margin: auto;
+  margin-top: 11%;
   padding: 12px;
-  background: rgb(255,165,0,0.3);
+  background: rgb(255,165,0,0.2);
 }
 
 .disable-link {
   text-decoration: none;
+  color: black;
 }
 
+.filter-table-input {
+  margin-bottom: 12px;
+}
