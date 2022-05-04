@@ -25,7 +25,7 @@ const ListCharacter = () => {
   }
 
   return(
-    <div> 
+    <div className='list'> 
       <Title />
       <Navbar />
       <div className='list'>
