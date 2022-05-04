@@ -28,7 +28,6 @@
   margin-top: 15px;
 }
 
-
 .block {
   display: block;
   padding: 20px;
@@ -44,13 +43,17 @@
 
 .list h3 {
   display: block;
-  text-align: center;
-  margin-left: 20%;
+  margin-left: 57%;
 }
 
 .button {
   display: inline;
-  width: 4px;
-  margin-left: 57%;
+  margin: 5px;
+  margin-top: 15px;
+  margin-left: 58%;
   padding-bottom: 20%;
+}
+
+.button button {
+  margin: 5px;
 }
