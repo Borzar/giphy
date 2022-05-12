@@ -35,7 +35,7 @@ const SearchBar = () => {
           characters != null ? (
             characters.map((character) => (
               <div key={character.id}> 
-                <Link className='disable-link' to={`/Personaje/${character.id}`}> {character.name} </Link>
+                <Link className='disable-link' to={`/characters/${character.id}`}> {character.name} </Link>
               </div>
             ))
           ) : ('Lista de personajes ...')

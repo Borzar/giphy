@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { episodeListPage } from '../services/functions'
-import { Link } from 'react-router-dom'
 import Title from "./Title"
 import Navbar from "./Navbar"
 import '../css/List.css'

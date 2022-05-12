@@ -3,7 +3,7 @@ import { onlyCharacter } from "../services/functions"
 import { useEffect, useState } from "react"
 import '../css/Character.css'
 
-const Personaje = () => {
+const Character = () => {
   const params = useParams()
   const [character, setCharacter] = useState(null) 
 
@@ -29,4 +29,4 @@ const Personaje = () => {
   )
 }
 
-export default Personaje
+export default Character
