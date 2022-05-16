@@ -4,7 +4,7 @@ import logo from '../assets/ghostimage.jpeg'
 
 const Navbar = () => {
   return (
-    <nav className='navbar'>
+    <nav className='navbar' data-testid='navbar'>
       <ul className='navbar-ul'>
         <div>
         <li className='navbar-li'>

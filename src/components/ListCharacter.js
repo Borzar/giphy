@@ -28,7 +28,7 @@ const ListCharacter = () => {
     <div className='list'> 
       <Title />
       <Navbar />
-      <div className='list'>
+      <div className='list' data-testid='list'>
         <h3>Lista personajes </h3>
         <div className='button'>
           <button onClick={prevPage}> Prev </button>
